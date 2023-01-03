@@ -25,3 +25,6 @@ Model Evaluation through voting scheme:
 3. StackLSTM-Model-Training-Voting-For-Test-Partial-Dataset.py ----> evaluating the StackLSTM classifier designed for agree and disagree class.
 4. Attention-LSTM-Model-Voting-For-Test-Partial-Dataset.py ----> evaluating the Attention-LSTM classifier designed for agree and disagree class.
 5. The voting result will be generated as a single .csv file named voting_result.csv
+
+
+The full data and extracted feature can be found here: https://1drv.ms/u/s!AvFAYFbdSN6phmo78TMOyUO-cu2-?e=24LfL2
