@@ -84,7 +84,7 @@ def main():
     X = Train["Text"].values
     y = Train["Stance"].values
     ind = Train["Index"].values
-    kf = StratifiedKFold(n_splits=5, shuffle=False)
+    kf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
     # Iterate over hyperparameter combinations
     for run in runs:

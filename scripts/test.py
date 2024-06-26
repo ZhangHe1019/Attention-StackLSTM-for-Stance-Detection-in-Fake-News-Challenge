@@ -133,7 +133,7 @@ def main(params, output_file='test partial',
     X = Train["Text"].values
     y = Train["Stance"].values
     ind = Train["Index"].values
-    kf = StratifiedKFold(n_splits=5, shuffle=False)
+    kf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
     for run in runs:
         fold_count = 0
@@ -202,7 +202,7 @@ def main(params, output_file='test partial',
 
 if __name__ == "__main__":
     # Create the parser
-    parser = argparse.ArgumentParser(description="Specify the mode for the operation.")
+    parser = argparse.ArgumentParser(description="Specify the dataset size for the operation.")
     # Add the --subset argument
     parser.add_argument('--subset', type=str, required=True, choices=['full', 'partial'],
                         help='Mode to run: full or partial. "full" processes the entire dataset, while "partial" processes a subset.')
@@ -229,6 +229,6 @@ if __name__ == "__main__":
         main(params=params)
     elif args.subset == 'full':
         main(params=params, output_file='test full',
-             train_file='train_concat_representation',
-             test_file='test_concat_representation',
+             train_file='train_concat_dataset',
+             test_file='test_concat_dataset',
              num_class=4)

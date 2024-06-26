@@ -75,7 +75,7 @@ def main():
     X = Train["Text"].values
     y = Train["Stance"].values
     ind = Train["Index"].values
-    kf = StratifiedKFold(n_splits=5, shuffle=False)
+    kf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
     for run in runs:
         fold_count = 0

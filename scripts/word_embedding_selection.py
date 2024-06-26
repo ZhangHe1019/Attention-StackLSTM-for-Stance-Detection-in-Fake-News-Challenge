@@ -39,6 +39,7 @@ if __name__ == "__main__":
                     "wiki_news_300d":300,
                     "crawl.300d.2M":300,
                     "GoogleNews.vector300":300}
+
     filenames = {"wiki_news_300d_sub":"wiki-news-300d-1M-subword.vec",
                "glove.twitter.27B.50d":"glove.twitter.27B.50d.txt",
                "glove.6B.300d":"glove.6B.300d.txt",
@@ -51,6 +52,7 @@ if __name__ == "__main__":
                "crawl.300d.2M":"crawl-300d-2M.vec",
                "wiki_news_300d":"wiki-news-300d-1M.vec",
                "GoogleNews.vector300":"GoogleNews-vectors-negative300.txt"}
+
     params = OrderedDict(epoch_num=[1],
                 lr=[0.001],
                 batch_size=[128],
@@ -72,7 +74,7 @@ if __name__ == "__main__":
     X = Train["Text"].values
     y = Train["Stance"].values
     ind = Train["Index"].values
-    kf = StratifiedKFold(n_splits=5, shuffle=False)
+    kf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
     for run in runs:
         fold_count = 0
