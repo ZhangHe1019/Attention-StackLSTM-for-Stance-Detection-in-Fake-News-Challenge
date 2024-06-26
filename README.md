@@ -14,10 +14,14 @@ This command executes three Python scripts for generating different types of fea
 ./script_name.sh selection [subcommand]
 ```
 Subcommands for selection include:
-embedding: Selects the best word embedding model.
-feature: Executes feature selection.
-layer: Adjusts the model structure.
-hyperparameter: Tunes the hyperparameters.
+
+| Subcommand      | Description                             |
+|-----------------|-----------------------------------------|
+| **embedding**   | Selects the best word embedding model.  |
+| **feature**     | Executes feature selection.             |
+| **layer**       | Adjusts the model structure.            |
+| **hyperparameter** | Tunes the hyperparameters.           |
+
 
 ```bash
 ./script_name.sh selection feature
