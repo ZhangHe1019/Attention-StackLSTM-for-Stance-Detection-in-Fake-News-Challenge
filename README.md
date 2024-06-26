@@ -5,13 +5,13 @@
 
 #### Data Preprocessing
 ```bash
-./.sh preprocessing
+./run.sh preprocessing
 ```
 This command executes three Python scripts for generating different types of features: bag-of-words, baseline features, and topic features. All scripts are configured for the 'train' mode using the 'fnc-1' corpus.
 
 #### Feature Selection and Model Configuration
 ```bash
-./.sh selection [subcommand]
+./run.sh selection [subcommand]
 ```
 Subcommands for selection include:
 
@@ -24,17 +24,17 @@ Subcommands for selection include:
 
 For example, to execute feature selection:
 ```bash
-./.sh selection feature
+./run.sh selection feature
 ```
 
 #### Model Training
 ```bash
-./.sh train
+./run.sh train
 ```
 Trains models on both full and partial subsets of data.
 
 #### Testing
 ```bash
-./.sh test
+./run.sh test
 ```
 Tests models on both full and partial subsets of data.
