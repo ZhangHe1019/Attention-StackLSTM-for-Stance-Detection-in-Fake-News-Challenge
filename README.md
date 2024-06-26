@@ -22,7 +22,7 @@ Subcommands for selection include:
 | **layer**       | Adjusts the model structure.            |
 | **hyperparameter** | Tunes the hyperparameters.           |
 
-
+For example, to execute feature selection:
 ```bash
 ./script_name.sh selection feature
 ```
