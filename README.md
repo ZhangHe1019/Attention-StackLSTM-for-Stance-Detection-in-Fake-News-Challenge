@@ -1,4 +1,4 @@
-## Prerequisites
+### Prerequisites
 - Python 3.9 installed
 - Required Python libraries installed (refer to `requirements.txt`)
 
